@@ -1,0 +1,26 @@
+.slick-slide>div {
+  margin: 0 10px;
+}
+.meta{
+  margin-bottom: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    font-weight: 350;
+    color: #575353;
+}
+button{
+  font-size: 14px;
+    padding: 7px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(247, 109, 10);
+
+}
+button:hover {
+  background-color: rgb(31, 41, 55);
+  transition: 500ms;
+}
+.fig{
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.13);
+}

@@ -1,0 +1,53 @@
+.figure {
+    width: 300px;
+    text-align: center;
+    margin: 10px;
+    transition: 200ms;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.13);
+    border-radius: 13px;
+    cursor: pointer;
+}
+.name{
+    font-size: medium;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.figure img {
+    height: 200px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 7px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(247, 109, 10);
+}
+.figure:hover{
+    color:rgb(247, 109, 10);
+    transition: 500ms;
+}
+.figure:hover img{
+    filter: brightness(75%);
+    transition: 500ms;
+}
+button:hover {
+    background-color: rgb(31, 41, 55);
+    transition: 500ms;
+}
+
+
+.info {
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    font-weight:350;
+    color: #575353;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    white-space: pre-wrap;
+}
