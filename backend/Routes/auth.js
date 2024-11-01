@@ -41,7 +41,7 @@ router.post('/login', async (req, res) => {
                 res.cookie('token', token, { maxAge: 7 * 24 * 60 * 60 * 1000,sameSite:'None',secure:true }).json({
                     id: user._id,
                     username,
-                });//save in cookies make cookie
+                });//save in cookies make cookie 
             })
         }
         else {

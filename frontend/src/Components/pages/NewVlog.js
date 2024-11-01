@@ -48,28 +48,29 @@ function NewVlog() {
     }
     return (
         <>
+        <div className="bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1548561711-73eae96ad48d?q=80&w=1891&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`, minHeight: '100vh' }}>
             <div className="fixed top-0 left-1/2 transform -translate-x-1/2 w-96 max-w-md z-[1000] p-4">
                 {messages.success_msg && (
-                    <div className={'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative '} role="alert">
+                    <div className={'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative shadow-lg'} role="alert">
                         <strong className="font-bold">Success! </strong>
                         <span className="block sm:inline">{messages.success_msg}</span>
                     </div>
                 )}
                 {messages.error_msg && (
-                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative shadow-lg" role="alert">
                         <strong className="font-bold">Error! </strong>
                         <span className="block sm:inline">{messages.error_msg}</span>
                     </div>
                 )}
             </div>
             <Header />
-            <div className='mt-24'>
-                <p className='text-3xl m-4'>Create Vlog</p>
-                <div className='border-2 m-2 rounded-lg border-gray-400'>
+            <div className='mt-16 flex flex-col items-center'>
+                <p className='text-4xl font-semibold mb-6 text-gray-800'>Create Vlog</p>
+                <div className='border-2 rounded-lg border-gray-300 shadow-lg bg-white max-w-lg w-full p-8'>
                     <form class="max-w-md m-8" onSubmit={submit}>
                         <div class="mb-6">
                             <label for="place_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Place name</label>
-                            <input type="text" id="place_name" class="bg-white-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            <input type="text" id="place_name" class="w-full p-2.5 mt-1 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500"
                                 value={pname} name="name" onChange={(e) => { setPname(e.target.value) }} required />
                         </div>
                         <div class="mb-6">
@@ -86,13 +87,16 @@ function NewVlog() {
                             <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none  dark:border-gray-600 dark:placeholder-gray-400" id="multiple_files" type="file" name='file' onChange={(e) => { setFile(e.target.files) }} multiple required />
                         </div>
 
-                        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                        <button type="submit" class="w-full py-2.5 bg-blue-600 text-white rounded-lg font-medium text-sm hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">Submit</button>
                     </form>
                 </div>
             </div>
+           
             <Footer />
+         </div>
         </>
     )
 }
 
 export default NewVlog
+
